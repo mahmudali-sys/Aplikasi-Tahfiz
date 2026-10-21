@@ -1,0 +1,6 @@
+{
+  "name": "Laporan Tahsin & Tahfiz",
+  "description": "Aplikasi pencatatan dan laporan setoran Tahsin dan Tahfiz Al-Qur'an santri dengan penilaian tajwid dan kelancaran bacaan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

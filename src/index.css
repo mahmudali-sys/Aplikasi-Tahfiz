@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Islamic geometry subtle patterns and styling */
+  .bg-arabesque {
+    background-color: #faf9f5;
+    background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#064e3b 0.75px, #faf9f5 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* When printing certificate modal specifically */
+  body.printing-certificate * {
+    visibility: hidden;
+  }
+
+  body.printing-certificate #certificate-print-area,
+  body.printing-certificate #certificate-print-area * {
+    visibility: visible;
+  }
+
+  body.printing-certificate #certificate-print-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 999999;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 6mm;
+  }
+}
